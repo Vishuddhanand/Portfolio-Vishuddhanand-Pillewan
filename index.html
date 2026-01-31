@@ -18,7 +18,15 @@
     <header>
         <div class="nav">
             <div class="left">Portfolio</div>
-            <div class="right">
+
+            <!-- Hamburger icon for mobile -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="right" id="nav-links">
                 <a href="#home" id="one">Home</a>
                 <a href="#about">About</a>
                 <a href="#education">Education</a>
@@ -27,12 +35,13 @@
                 <a href="#contact">Contact</a>
             </div>
         </div>
+
     </header>
 
     <main>
         <div class="intro-container" id="home">
             <div class="intro-image">
-                <img src="assets/vishu portfolio img1.jpg" alt="Vishuddhanand" />
+                <img src="assets/img1.jpg" alt="Vishuddhanand" />
             </div>
             <div class="intro-text">
                 <h3>Hello It's me</h3>
@@ -76,7 +85,7 @@
         </div>
 
         <div class="image-container">
-            <img src="assets/vishu portfolio img2.jpg" alt="Profile" class="glow-img">
+            <img src="assets/img2.jpg" alt="Profile" class="glow-img">
         </div>
     </section>
 
@@ -131,6 +140,12 @@
             </div>
 
             <div class="skill-box">
+                <i class="fas fa-chart-line skill-icon"></i>
+                <h3>Data Science</h3>
+                <p>Analyzing and interpreting complex data to drive decision making.</p>
+            </div>
+
+            <div class="skill-box">
                 <i class="fas fa-video skill-icon"></i>
                 <h3>Video Editing</h3>
                 <p>Skilled in crafting engaging videos using various editing software.</p>
@@ -142,11 +157,7 @@
                 <p>Designing vibrant and professional marketing materials with Canva.</p>
             </div>
 
-            <div class="skill-box">
-                <i class="fas fa-chart-line skill-icon"></i>
-                <h3>Data Science</h3>
-                <p>Analyzing and interpreting complex data to drive decision making.</p>
-            </div>
+
 
         </div>
     </section>
@@ -162,6 +173,10 @@
                 <h3>Best Network Finder Website</h3>
                 <p>A website that helps users discover which network (Jio or Airtel) works best in their area based on
                     signal strength and connectivity tests.</p>
+                <div class="project-links">
+                    <a href="https://live-demo-link.com" target="_blank">Live Demo</a>
+                    <a href="https://github.com/username/image-editor" target="_blank">GitHub</a>
+                </div>
             </div>
 
             <div class="project-box">
@@ -170,22 +185,78 @@
                 <p>A dynamic tool that accepts user image URL, name, occupation, and description to generate a
                     customized
                     profile card using HTML, CSS, and JavaScript.</p>
+                <div class="project-links">
+                    <a href="https://live-demo-link.com" target="_blank">Live Demo</a>
+                    <a href="https://github.com/username/image-editor" target="_blank">GitHub</a>
+                </div>
             </div>
 
+            <!-- Silent Scroll Reel Project -->
             <div class="project-box">
-                <i class="fa-brands fa-amazon"></i>
-                <h3>Amazon UI Clone</h3>
-                <p>A frontend clone of the Amazon website created using HTML and CSS replicating the layout and
-                    structure.
+                <i class="fa-solid fa-film"></i>
+                <h3>Silent Scroll Reel Project</h3>
+                <p>A social-media-style reel project with silent autoplay by default. Users can like or dislike reels,
+                    follow or unfollow creators, and toggle the sound on/off. Built using HTML, CSS, and JavaScript for
+                    smooth interactive scrolling.</p>
+
+                <div class="project-links">
+                    <a href="https://live-demo-link.com" target="_blank">Live Demo</a>
+                    <a href="https://github.com/username/image-editor" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+
+            <!-- Image Editor -->
+            <div class="project-box">
+                <i class="fa-solid fa-image"></i>
+                <h3>Image Editor</h3>
+                <p>A browser-based image editor with live adjustments for grayscale, opacity, contrast, and brightness.
+                    Users can instantly see changes, built using HTML, CSS, and JavaScript.
                 </p>
+                <div class="project-links">
+                    <a href="https://live-demo-link.com" target="_blank">Live Demo</a>
+                    <a href="https://github.com/username/image-editor" target="_blank">GitHub</a>
+                </div>
             </div>
 
+
+            <!-- Snake Game -->
             <div class="project-box">
-                <i class="fas fa-gamepad"></i>
-                <h3>Supercell Website Clone</h3>
-                <p>Replica of the Supercell official website built using HTML and CSS following the original design and
-                    responsiveness.</p>
+                <i class="fa-solid fa-gamepad"></i>
+                <h3>Snake Game</h3>
+                <p>A classic Snake game with responsive design, high-score tracking, and keyboard controls. Built using
+                    HTML, CSS, and JS.</p>
+                <div class="project-links">
+                    <a href="https://live-demo-link.com" target="_blank">Live Demo</a>
+                    <a href="https://github.com/username/image-editor" target="_blank">GitHub</a>
+                </div>
             </div>
+
+            <!-- E-commerce Website -->
+            <div class="project-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h3>E-commerce Website</h3>
+                <p>A fully responsive e-commerce frontend for a client including product pages, shopping cart, and
+                    smooth animations. Built with HTML, CSS, and JS.</p>
+                <div class="project-links">
+                    <a href="https://live-demo-link.com" target="_blank">Live Demo</a>
+                    <a href="https://github.com/username/image-editor" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Productivity Dashboard -->
+            <div class="project-box">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <h3>Productivity Dashboard</h3>
+                <p>A web app for productivity with To-Do List, Daily Planner, Pomodoro Timer, Motivational Quotes,
+                    Weather updates, and Daily Goals tracking. Built with HTML, CSS, and JS.</p>
+
+                <div class="project-links">
+                    <a href="https://live-demo-link.com" target="_blank">Live Demo</a>
+                    <a href="https://github.com/username/image-editor" target="_blank">GitHub</a>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -239,7 +310,7 @@
 
             <div class="footer-right">
                 <div class="footer-logo">
-                    <img src="assets/viishu portfolio img3.jpg" alt="Vishuddhanand">
+                    <img src="assets/img3.jpg" alt="code-image">
                 </div>
             </div>
 
@@ -279,6 +350,26 @@
             backDelay: 1400,
             loop: true
         });
+
+
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.right');
+        const navLinks = document.querySelectorAll('.right a');
+
+        // Toggle menu on hamburger click
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when any link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navMenu.classList.remove('active');
+            });
+        });
+
 
     </script>
 
