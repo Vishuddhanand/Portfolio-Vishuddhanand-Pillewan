@@ -269,8 +269,6 @@
                 </div>
             </div>
 
-
-
         </div>
     </section>
 
@@ -369,6 +367,12 @@
         const hamburger = document.querySelector('.hamburger');
         const navMenu = document.querySelector('.right');
         const navLinks = document.querySelectorAll('.right a');
+
+        const sendBtn = document.querySelector('.send-btn');
+
+        sendBtn.addEventListener('click' , ()=>{
+            alert("Message Sent Successfully")
+        })
 
         // Toggle menu on hamburger click
         hamburger.addEventListener('click', () => {
