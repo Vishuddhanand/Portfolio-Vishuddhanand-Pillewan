@@ -25,14 +25,12 @@ body {
 .nav {
   display: flex;
   justify-content: space-between;
-  /* space-around → better for left/right layout */
   align-items: center;
   width: 100%;
   padding: 0 20px;
   min-height: 90px;
   background-color: #23263a;
   position: relative;
-  /* needed for absolute positioning of mobile menu */
 
 }
 
@@ -68,7 +66,6 @@ a:hover {
   cursor: pointer;
   gap: 0.4rem;
   z-index: 1001;
-  /* above sidebar */
 }
 
 .hamburger span {
@@ -102,22 +99,17 @@ a:hover {
     position: fixed;
     top: 0;
     right: 0;
-    /* slide from right */
     height: 100vh;
     width: 100%;
-    /* sidebar width */
     max-width: 100%;
     background: linear-gradient(to bottom, rgba(35, 38, 58, 0.9), rgba(35, 38, 58, 1));
     backdrop-filter: blur(8px);
-    /* frosted glass effect */
-    /* semi-transparent */
     display: flex;
     flex-direction: column;
     padding-top: 5rem;
     align-items: center;
     gap: 1.5rem;
     transform: translateX(100%);
-    /* hide by default */
     transition: transform 0.3s ease;
     z-index: 1000;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
@@ -125,7 +117,6 @@ a:hover {
 
   .right.active {
     transform: translateX(0);
-    /* slide in */
   }
 
   .right a {
@@ -141,11 +132,7 @@ a:hover {
 }
 
 
-
-
-
 /* main */
-
 
 main {
   min-height: 80vh;
@@ -156,21 +143,29 @@ main {
 }
 
 
-
-
-
 .intro-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  /* relative spacing */
   margin-top: 6rem;
   padding: 0 5vw;
-  /* responsive side spacing */
   width: 100%;
+  
 }
 
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
 
 .intro-image {
   background: #08f0fa;
@@ -180,13 +175,13 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: float 3s ease-in-out infinite;
 }
 
 
 .intro-image img {
   width: 100%;
   max-width: 17rem;
-  /* scales with screen */
   height: auto;
   aspect-ratio: 3 / 4;
   object-fit: cover;
@@ -265,9 +260,7 @@ main {
 .social-icons {
   display: flex;
   gap: 1.125rem;
-  /* 18px → rem */
   margin-bottom: 2rem;
-  /* 32px → rem */
 }
 
 .social-icons a {
@@ -276,15 +269,11 @@ main {
   justify-content: center;
   background: none;
   border: 0.125rem solid #08f0fa;
-  /* 2px → rem */
   color: #08f0fa;
   width: 2.75rem;
-  /* 44px → rem */
   height: 2.75rem;
-  /* 44px → rem */
   border-radius: 50%;
   font-size: 1.25rem;
-  /* already relative 👍 */
   transition: background 0.2s, color 0.2s, border-color 0.2s;
   text-decoration: none;
 }
@@ -320,7 +309,6 @@ main {
     justify-content: center;
   }
 
-  /* Slightly smaller headings */
   .intro-text h1 {
     font-size: 2.1rem;
   }
@@ -351,8 +339,6 @@ main {
 
 /* About me */
 
-
-
 .about-section {
   display: flex;
   align-items: center;
@@ -365,7 +351,6 @@ main {
 
 .about-container.about-text-only {
   max-width: 37.5rem;
-  /* 600px → rem */
   width: 100%;
 }
 
@@ -374,9 +359,6 @@ main {
   text-align: left;
   color: #fff;
 }
-
-
-
 
 
 .about-text h2 {
@@ -439,11 +421,9 @@ body {
 
 .glow-img {
   width: 15.6rem;
-  /* 250px → rem */
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   border: 0.3125rem solid #fff;
-  /* 5px → rem */
   box-shadow:
     0 0 2.5rem 0.6rem #7cfada,
     0 0 5rem 1.8rem #ea67de;
@@ -494,22 +474,18 @@ body {
 
 
 
-
 /* My Education */
 
 .education-section {
   padding: 3.75rem 1.25rem 5rem 1.25rem;
-  /* 60px 20px 80px 20px → rem */
   text-align: center;
   color: #fff;
 }
 
 .education-section h1 {
   font-size: 3rem;
-  /* desktop */
   font-weight: 700;
   margin-bottom: 3.125rem;
-  /* 50px → rem */
 }
 
 .education-section .accent {
@@ -518,27 +494,20 @@ body {
 
 .education-container {
   max-width: 50rem;
-  /* 800px → rem */
   width: 95%;
-  /* responsive width */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
-  /* 30px → rem */
   align-items: center;
 }
 
 .education-box {
   width: 100%;
   border: 0.3125rem solid #08f0fa;
-  /* 5px → rem */
   border-radius: 1.125rem;
-  /* 18px → rem */
   box-shadow: 0 0.5rem 2rem rgba(8, 240, 250, 0.15);
-  /* 8px 32px → rem */
   padding: 1.5rem 1.875rem;
-  /* 25px 30px → rem */
   background-color: #1e2236;
   text-align: left;
 }
@@ -547,13 +516,12 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  /* 8px → rem */
+
 }
 
 .education-box h4 {
   font-size: 1.3rem;
   margin-bottom: 0.9375rem;
-  /* 15px → rem */
   font-weight: 500;
   color: #08f0fa;
 }
@@ -563,7 +531,7 @@ body {
   line-height: 1.6;
   color: #dcdcdc;
   margin-bottom: 0.375rem;
-  /* 6px → rem */
+
 }
 
 
@@ -596,7 +564,6 @@ body {
 
 .skills-section {
   padding: 3.75rem 1.25rem 5rem 1.25rem;
-  /* 60px 20px 80px 20px → rem */
   text-align: center;
   color: #fff;
 }
@@ -605,7 +572,6 @@ body {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 2.5rem;
-  /* 40px → rem */
 }
 
 .skills-section .accent {
@@ -617,44 +583,35 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5625rem 2.5rem;
-  /* 25px 40px → rem */
   max-width: 68.75rem;
-  /* 1100px → rem */
   margin: 0 auto;
 }
 
 .skill-box {
   background: #1e2236;
   border-radius: 1.125rem;
-  /* 18px → rem */
   padding: 1.875rem 1.25rem;
-  /* 30px 20px → rem */
   box-shadow: 0 0.5rem 2rem rgba(8, 240, 250, 0.15);
-  /* 8px 32px → rem */
   max-width: 21.25rem;
-  /* 340px → rem */
   box-sizing: border-box;
   transition: transform 0.3s ease;
 }
 
 .skill-box:hover {
   transform: translateY(-0.5rem);
-  /* 8px → rem */
   box-shadow: 0 0.75rem 2.5rem rgba(8, 240, 250, 0.4);
-  /* 12px 40px → rem */
 }
 
 .skill-icon {
   color: #08f0fa;
   font-size: 3rem;
   margin-bottom: 1.25rem;
-  /* 20px → rem */
 }
 
 .skill-box h3 {
   font-size: 1.5rem;
   margin-bottom: 0.9375rem;
-  /* 15px → rem */
+
 }
 
 .skill-box p {
@@ -668,7 +625,7 @@ body {
   .skills-container {
     flex-direction: column;
     gap: 1.5rem;
-    /* smaller spacing for stacked boxes */
+
   }
 
   .skill-box {
@@ -678,7 +635,7 @@ body {
 
   .skill-box:hover {
     transform: translateY(-0.25rem);
-    /* smaller lift on mobile */
+  
   }
 
   .skill-icon {
@@ -701,7 +658,6 @@ body {
 
 .projects-section {
   padding: 3.75rem 1.25rem 5rem 1.25rem;
-  /* 60px 20px 80px 20px → rem */
   text-align: center;
   color: #fff;
 }
@@ -710,7 +666,7 @@ body {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 2.5rem;
-  /* 40px → rem */
+
 }
 
 .projects-section .accent {
@@ -722,31 +678,23 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.5625rem 2.5rem;
-  /* 25px 40px → rem */
   max-width: 68.75rem;
-  /* 1100px → rem */
   margin: 0 auto;
 }
 
 .project-box {
   box-sizing: border-box;
   width: calc(50% - 2.5rem);
-  /* 50% - gap → relative */
   border: 0.3125rem solid #08f0fa;
-  /* 5px → rem */
   border-radius: 3.125rem;
-  /* 50px → rem */
   background: #1e2236;
   padding: 1.875rem 1.25rem;
-  /* 30px 20px → rem */
   margin-top: 2.5rem;
-  /* 40px → rem */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-box:hover {
   transform: translateY(-0.5rem);
-  /* 8px → rem */
   box-shadow: 0 0.75rem 2.5rem rgba(8, 240, 250, 0.4);
 }
 
@@ -754,13 +702,11 @@ body {
   color: #08f0fa;
   font-size: 3rem;
   margin-bottom: 1.25rem;
-  /* 20px → rem */
 }
 
 .project-box h3 {
   font-size: 1.5rem;
   margin-bottom: 0.9375rem;
-  /* 15px → rem */
 }
 
 .project-box p {
@@ -772,25 +718,20 @@ body {
 .project-links {
   display: flex;
   justify-content: center;
-  /* center horizontally */
   gap: 1rem;
+  margin-top: 1.2rem;
   opacity: 0;
-  /* hidden initially */
   pointer-events: none;
-  /* prevent clicks when hidden */
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(10px);
-  /* slight slide-up */
-  margin-top: 1.5rem;
-  /* spacing from paragraph */
+
 }
 
 .project-box:hover .project-links {
   opacity: 1;
   pointer-events: auto;
-  /* enable clicks */
   transform: translateY(0);
-  /* slide in */
+
 }
 
 .project-links a {
@@ -820,7 +761,6 @@ body {
 
   .project-box {
     width: 100%;
-    /* full width stack */
     margin-top: 1.5rem;
     padding: 1.5rem 1rem;
   }
@@ -849,9 +789,6 @@ body {
   }
 }
 
-
-/* contact-section */
-
 /* Contact Section */
 
 .contact-section {
@@ -860,7 +797,6 @@ body {
   align-items: center;
   min-height: 100vh;
   padding-top: 2.5rem;
-  /* 40px → rem */
 }
 
 .contact-section h1 {
@@ -868,7 +804,6 @@ body {
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  /* 32px → rem */
   letter-spacing: 1px;
 }
 
@@ -885,19 +820,15 @@ body {
 form {
   background: #242834;
   border-radius: 0.75rem;
-  /* 12px → rem */
   padding: 2.25rem 2.375rem 2rem 2.375rem;
-  /* 36px 38px 32px 38px → rem */
   box-shadow: 0 0.5rem 1.625rem rgba(0, 0, 0, 0.23);
-  /* 8px 26px → rem */
   max-width: 43.75rem;
-  /* 700px → rem */
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.375rem;
-  /* 22px → rem */
   box-sizing: border-box;
+  margin-bottom: 3rem;
 }
 
 .one,
@@ -905,26 +836,22 @@ form {
 .three {
   display: flex;
   gap: 1.125rem;
-  /* 18px → rem */
   width: 100%;
   flex-wrap: wrap;
-  /* ensures stacking on mobile */
+
 }
 
 .one input,
 .two input {
   flex: 1;
   padding: 1.125rem 1rem;
-  /* 18px 16px → rem */
   background: #353946;
   border: none;
   outline: none;
   color: #fff;
   border-radius: 0.4375rem;
-  /* 7px → rem */
   font-size: 1rem;
   margin-bottom: 0.25rem;
-  /* 4px → rem */
   box-sizing: border-box;
 }
 
@@ -932,7 +859,6 @@ form {
   flex: 1;
   width: 100%;
   min-height: 5.5rem;
-  /* 88px → rem */
   background: #353946;
   border: none;
   outline: none;
@@ -940,9 +866,7 @@ form {
   font-size: 1rem;
   resize: vertical;
   padding: 1.125rem 1rem;
-  /* 18px 16px → rem */
   border-radius: 0.4375rem;
-  /* 7px → rem */
   box-sizing: border-box;
   margin: 0;
 }
@@ -951,7 +875,6 @@ form {
   display: flex;
   justify-content: center;
   margin-top: 1.25rem;
-  /* 20px → rem */
 }
 
 .send-btn {
@@ -960,12 +883,9 @@ form {
   font-weight: 600;
   border: none;
   border-radius: 1.125rem;
-  /* 18px → rem */
   padding: 1.0625rem 2.875rem;
-  /* 17px 46px → rem */
   font-size: 1.1rem;
   box-shadow: 0 0 1.125rem 0.25rem #19e9fc90;
-  /* 18px 4px → rem */
   cursor: pointer;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
@@ -974,7 +894,6 @@ form {
   background: #29f9eb;
   color: #222328;
   box-shadow: 0 0 1.5625rem 0.625rem #19e9fc99;
-  /* 25px 10px → rem */
 }
 
 
@@ -985,12 +904,11 @@ form {
   .three {
     flex-direction: column;
     gap: 0.75rem;
-    /* smaller spacing on mobile */
+    
   }
 
   .contact-section {
     min-height: auto;
-    /* remove full viewport height */
     padding-inline: 0.625rem;
     padding-bottom: 5rem;
 
@@ -1004,20 +922,15 @@ form {
 
   .send-btn {
     padding: 0.875rem 2.25rem;
-    /* slightly smaller for mobile */
     font-size: 1rem;
   }
 
   form {
     padding: 1.5rem 1rem;
-    /* smaller padding for mobile */
   }
 }
 
 
-
-
-/* footer */
 
 /* Footer */
 
@@ -1026,45 +939,38 @@ form {
   background-color: #23263a;
   color: #fff;
   padding: 3.75rem 1.25rem 3.125rem;
-  /* 60px 20px 50px → rem */
   overflow: hidden;
 }
 
 .footer-container {
   max-width: 60rem;
-  /* 960px → rem */
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 2.5rem;
-  /* 40px → rem */
 }
 
 /* Contact & Icons */
 .footer-contact h3 {
   font-weight: 700;
   margin-bottom: 0.9375rem;
-  /* 15px → rem */
   color: #08f0fa;
 }
 
 .footer-contact p {
   margin: 0.3125rem 0;
-  /* 5px → rem */
   font-size: 1rem;
   color: #dcdcdc;
 }
 
 .footer-icons {
   margin-top: 0.9375rem;
-  /* 15px → rem */
 }
 
 .footer-icons a {
   margin-right: 0.625rem;
-  /* 10px → rem */
   font-size: 1.6rem;
   color: #08f0fa;
   transition: color 0.3s ease, transform 0.2s ease;
@@ -1081,27 +987,21 @@ form {
 
 .footer-logo img {
   max-width: 10rem;
-  /* 160px → rem */
   height: 10rem;
-  /* 160px → rem */
   border-radius: 50%;
   border: 0.1875rem solid #08f0fa;
-  /* 3px → rem */
   object-fit: cover;
   box-shadow: 0 0 1.125rem #08f0fa80;
-  /* 18px → rem */
 }
 
 .footer-copy {
   text-align: center;
   margin-top: 1.875rem;
-  /* 30px → rem */
   font-size: 0.95rem;
   color: #aaa;
   border-top: 0.0625rem solid #444;
-  /* 1px → rem */
   padding-top: 1.5625rem;
-  /* 25px → rem */
+
 }
 
 /* Footer animated squares container */
@@ -1119,7 +1019,6 @@ form {
   position: absolute;
   bottom: 0;
   border-radius: 0.25rem;
-  /* 4px → rem */
   transform: rotate(45deg);
   animation-name: kiteUp;
   animation-iteration-count: infinite;
@@ -1130,7 +1029,6 @@ form {
 #kite1 {
   left: 10%;
   width: 1.125rem;
-  /* 18px → rem */
   height: 1.125rem;
   background-color: #08f0fa;
   animation-duration: 6s;
@@ -1140,7 +1038,6 @@ form {
 #kite2 {
   left: 30%;
   width: 1.625rem;
-  /* 26px → rem */
   height: 1.625rem;
   background-color: #ea67de;
   animation-duration: 7s;
@@ -1150,7 +1047,6 @@ form {
 #kite3 {
   left: 50%;
   width: 1.375rem;
-  /* 22px → rem */
   height: 1.375rem;
   background-color: #ffd166;
   animation-duration: 5s;
@@ -1160,7 +1056,6 @@ form {
 #kite4 {
   left: 70%;
   width: 1.75rem;
-  /* 28px → rem */
   height: 1.75rem;
   background-color: #06d6a0;
   animation-duration: 6.5s;
@@ -1170,7 +1065,6 @@ form {
 #kite5 {
   left: 85%;
   width: 1.25rem;
-  /* 20px → rem */
   height: 1.25rem;
   background-color: #ff6b6b;
   animation-duration: 5.5s;
@@ -1200,7 +1094,6 @@ form {
   .footer-container {
     flex-direction: column;
     gap: 1.5rem;
-    /* smaller gap */
     align-items: center;
   }
 
@@ -1210,7 +1103,6 @@ form {
 
   .footer-logo img {
     max-width: 8rem;
-    /* smaller on mobile */
     height: 8rem;
   }
 
