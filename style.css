@@ -151,20 +151,22 @@ main {
   margin-top: 6rem;
   padding: 0 5vw;
   width: 100%;
-  
+
 }
 
 
 @keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .intro-image {
@@ -635,7 +637,7 @@ body {
 
   .skill-box:hover {
     transform: translateY(-0.25rem);
-  
+
   }
 
   .skill-icon {
@@ -904,7 +906,7 @@ form {
   .three {
     flex-direction: column;
     gap: 0.75rem;
-    
+
   }
 
   .contact-section {
