@@ -190,6 +190,19 @@
                 </div>
             </div>
 
+            <!-- MERN Notes App -->
+            <div class="project-box">
+                <i class="fa-solid fa-note-sticky"></i>
+                <h3>Notes App</h3>
+                <p>A full stack Notes Application built with the MERN stack. Users can create, edit, and delete notes
+                    with a responsive interface. React handles the interactive UI, while Node.js and Express manage the
+                    backend and serve the app.</p>
+                <div class="project-links">
+                    <a href="https://github.com/Vishuddhanand/notes-app" target="_blank">GitHub</a>
+                </div>
+            </div>
+
+
             <!-- Silent Scroll Reel Project -->
             <div class="project-box">
                 <i class="fa-solid fa-film"></i>
@@ -205,7 +218,7 @@
             </div>
 
 
-            <!-- Image Editor
+            <!-- Image Editor -->
             <div class="project-box">
                 <i class="fa-solid fa-image"></i>
                 <h3>Image Editor</h3>
@@ -216,7 +229,7 @@
                     <a href="https://live-demo-link.com" target="_blank">Live Demo</a>
                     <a href="https://github.com/username/image-editor" target="_blank">GitHub</a>
                 </div>
-            </div> -->
+            </div>
 
 
             <!-- Snake Game -->
@@ -278,22 +291,23 @@
     <section class="contact-section" id="contact">
         <h1>Contact <span class="accent">Me!</span></h1>
         <div class="form">
-            <form>
+            <form action="https://formspree.io/f/mrelndlz" method="POST">
                 <div class="one">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email Address">
+                    <input type="text" name="name" placeholder="Full Name" required minlength="2">
+                    <input type="email" name="email" placeholder="Email Address" required>
                 </div>
                 <div class="two">
-                    <input type="text" placeholder="Mobile Number">
-                    <input type="text" placeholder="Email Subject">
+                    <input type="tel" name="mobile" placeholder="Mobile Number" required pattern="[0-9]{10}">
+                    <input type="text" name="subject" placeholder="Email Subject" required>
                 </div>
                 <div class="three">
-                    <textarea placeholder="Your Message"></textarea>
+                    <textarea name="message" placeholder="Your Message" required minlength="10"></textarea>
                 </div>
                 <div class="four">
                     <button class="send-btn" type="submit">Send Message</button>
                 </div>
             </form>
+
         </div>
     </section>
 
@@ -347,7 +361,6 @@
     </footer>
 
 
-
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
@@ -370,12 +383,6 @@
         const navMenu = document.querySelector('.right');
         const navLinks = document.querySelectorAll('.right a');
 
-        const sendBtn = document.querySelector('.send-btn');
-
-        sendBtn.addEventListener('click', () => {
-            alert("Message Sent Successfully")
-        })
-
         // Toggle menu on hamburger click
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('open');
@@ -389,7 +396,6 @@
                 navMenu.classList.remove('active');
             });
         });
-
 
     </script>
 
